@@ -1,7 +1,10 @@
 const form = document.getElementById("signupForm");
 let nameError = document.getElementById("nameError");
+let nameERror = document.getElementById("form3Example1c");
 let emailError = document.getElementById("emailError");
+let emailERror = document.getElementById("form3Example3c");
 let passwordError = document.getElementById("passwordError");
+let passwordERror = document.getElementById("form3Example4c");
 let positionError = document.getElementById("positionError");
 let checkboxError = document.getElementById("checkboxError");
 let selectedValue;
@@ -28,6 +31,7 @@ form.addEventListener("submit", function (e) {
   const usernameRegex = /^\S+$/;
   if (!usernameRegex.test(name)) {
     nameError.style.display = "block";
+    nameERror.style.borderColor = "red";
     valid = false;
   } else {
     nameError.style.display = "none";
@@ -38,6 +42,7 @@ form.addEventListener("submit", function (e) {
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
   if (!passwordRegex.test(password)) {
     passwordError.style.display = "block";
+    passwordERror.style.borderColor = "red";
     valid = false;
   } else {
     passwordError.style.display = "none";
@@ -47,6 +52,7 @@ form.addEventListener("submit", function (e) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     emailError.style.display = "block";
+    emailERror.style.borderColor = "red";
     valid = false;
   } else {
     emailError.style.display = "none";
