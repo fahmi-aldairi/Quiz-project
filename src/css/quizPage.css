@@ -1,7 +1,6 @@
 body {
   background-color: #e9f1f9;
-  font-family: 'Inter', sans-serif;
-
+  font-family: "Inter", sans-serif;
 }
 
 main {
@@ -43,16 +42,17 @@ main .main-container .ndprogress-line {
 }
 
 .choice {
-  /* font-size: 20px; */
   border: 2px solid #26b2e8;
   border-radius: 10px;
   margin-bottom: 1rem;
   height: 60px;
-  /* padding: 10px; */
-  padding-top: 10px ;
+  padding-top: 10px;
   padding-left: 2rem;
 }
 
+.choice:hover {
+  background-color: #0d9bd2;
+}
 
 .container-button button {
   background-color: #0d9bd2;
@@ -78,8 +78,8 @@ input[type="radio"]::before {
 }
 
 input[type="radio"]:checked::before {
-  background-color: #1e90ff;
-  border-color: #1e90ff;
+  background-color: black;
+  border-color: black;
   position: absolute;
   left: -2px;
   top: -2px;

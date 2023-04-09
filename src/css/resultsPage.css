@@ -38,3 +38,10 @@ button.logoutButton:hover{
   cursor:context-menu;
 
 }
+
+.nav-link:hover,
+.navbar-brand:hover
+{
+  font-size: 15px;
+  color: #0a89b8;
+}
