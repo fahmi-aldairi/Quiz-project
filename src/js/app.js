@@ -7,9 +7,9 @@ const quizzes = {
       {
         title: "What is JavaScript?",
         answers: {
-          0: "JavaScript is a scripting language used to make the website interactive",
-          1: "JavaScript is an assembly language used to make the website interactive",
-          2: "JavaScript is a compiled language used to make the website interactive",
+          0: "a scripting language used to make website interactive",
+          1: "an assembly language used to make website interactive",
+          2: "a compiled language used to make website interactive",
           3: "None of the mentioned",
         },
         correctAnswer: 0,

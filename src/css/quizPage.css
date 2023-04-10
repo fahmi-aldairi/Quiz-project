@@ -84,3 +84,17 @@ input[type="radio"]:checked::before {
   left: -2px;
   top: -2px;
 }
+
+#nextButton{
+  background-color: #0d9bd2;
+}
+
+.form-check-label{
+  font-size: 18px;
+}
+
+@media (max-width : 432px) {
+  .form-check-label{
+    font-size: 11px;
+  }
+}
