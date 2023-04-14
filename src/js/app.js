@@ -1,15 +1,20 @@
 const signup = document.getElementById("signup");
 const quiz = document.getElementById("quiz");
 
+// const nameContainer = document.getElementById("fares");
+// nameContainer.style.backgroundColor = "red";
+
+// document.getElementById("fares").style.backgroundColor = "red";
+
 const quizzes = {
   javascriptQuiz: {
     questions: [
       {
         title: "What is JavaScript?",
         answers: {
-          0: "a scripting language used to make website interactive",
-          1: "an assembly language used to make website interactive",
-          2: "a compiled language used to make website interactive",
+          0: "JavaScript is a scripting language used to make the website interactive",
+          1: "JavaScript is an assembly language used to make the website interactive",
+          2: "JavaScript is a compiled language used to make the website interactive",
           3: "None of the mentioned",
         },
         correctAnswer: 0,
@@ -413,6 +418,8 @@ if (currentQuestion === 0) {
 quiz.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // sessionStorage.setItem("");
+
   answers[currentQuestion - 1] = +event.target.exampleRadios.value;
 
   scoreData[currentQuestion - 1] = {
@@ -425,6 +432,12 @@ quiz.addEventListener("submit", (event) => {
     questionAnswerText:
       quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
         .answers[+event.target.exampleRadios.value - 1],
+    questionCorrectAnswerText:
+      quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
+        .answers[
+        quizzes[`${userInfo.userPosition}Quiz`].questions[currentQuestion - 1]
+          .correctAnswer
+      ],
   };
 
   if (currentQuestion !== 10) {
@@ -450,11 +463,18 @@ quiz.addEventListener("submit", (event) => {
 
   event.target.exampleRadios.forEach((element) => (element.checked = false));
 
-  sessionStorage.setItem("userAnswers", JSON.stringify(answers));
-  sessionStorage.setItem("questionData", JSON.stringify(scoreData));
+  sessionStorage.setItem(
+    `userAnswers${userInfo.userPosition}`,
+    JSON.stringify(answers)
+  );
+  sessionStorage.setItem(
+    `questionData${userInfo.userPosition}`,
+    JSON.stringify(scoreData)
+  );
+  // sessionStorage.setItem("userQuiz")
   if (currentQuestion === 10) {
     calculateResult();
-    sessionStorage.setItem("score", `${score}`);
+    sessionStorage.setItem(`score${userInfo.userPosition}`, `${score}`);
     if (score > 5) {
       window.location.href = "../Results Page/resultsSuccess.html";
     } else {
