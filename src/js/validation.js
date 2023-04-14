@@ -5,6 +5,8 @@ let emailError = document.getElementById("emailError");
 let emailERror = document.getElementById("form3Example3c");
 let passwordError = document.getElementById("passwordError");
 let passwordERror = document.getElementById("form3Example4c");
+let CpasswordError = document.getElementById("CpasswordError");
+let CpasswordERror = document.getElementById("form3Example5c");
 let positionError = document.getElementById("positionError");
 let checkboxError = document.getElementById("checkboxError");
 let selectedValue;
@@ -46,6 +48,16 @@ form.addEventListener("submit", function (e) {
     valid = false;
   } else {
     passwordError.style.display = "none";
+  }
+
+  const Cpassword = e.target.Cpassword.value;
+  if (password !== Cpassword) {
+    CpasswordError.style.display = "block";
+    CpasswordERror.style.borderColor = "red";
+    valid = false;
+  } else {
+    CpasswordError.style.display = "none";
+    valid = true;
   }
 
   const email = e.target.email.value;
