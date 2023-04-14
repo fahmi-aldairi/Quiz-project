@@ -1,14 +1,10 @@
 const form = document.getElementById("signupForm");
 let nameError = document.getElementById("nameError");
-let nameERror = document.getElementById("form3Example1c");
 let emailError = document.getElementById("emailError");
-let emailERror = document.getElementById("form3Example3c");
 let passwordError = document.getElementById("passwordError");
-let passwordERror = document.getElementById("form3Example4c");
-let CpasswordError = document.getElementById("CpasswordError");
-let CpasswordERror = document.getElementById("form3Example5c");
 let positionError = document.getElementById("positionError");
 let checkboxError = document.getElementById("checkboxError");
+let passwordConfirmError = document.getElementById("passwordConfirmError");
 let selectedValue;
 const dropdownItems = document.querySelectorAll(".dropdown-item");
 let loggedInUser;
@@ -33,7 +29,6 @@ form.addEventListener("submit", function (e) {
   const usernameRegex = /^\S+$/;
   if (!usernameRegex.test(name)) {
     nameError.style.display = "block";
-    nameERror.style.borderColor = "red";
     valid = false;
   } else {
     nameError.style.display = "none";
@@ -44,27 +39,23 @@ form.addEventListener("submit", function (e) {
     /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
   if (!passwordRegex.test(password)) {
     passwordError.style.display = "block";
-    passwordERror.style.borderColor = "red";
     valid = false;
   } else {
     passwordError.style.display = "none";
   }
 
-  const Cpassword = e.target.Cpassword.value;
-  if (password !== Cpassword) {
-    CpasswordError.style.display = "block";
-    CpasswordERror.style.borderColor = "red";
+  const passwordConfirm = e.target["password-confirm"].value;
+  if (password !== passwordConfirm) {
+    passwordConfirmError.style.display = "block";
     valid = false;
   } else {
-    CpasswordError.style.display = "none";
-    valid = true;
+    passwordConfirmError.style.display = "none";
   }
 
   const email = e.target.email.value;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     emailError.style.display = "block";
-    emailERror.style.borderColor = "red";
     valid = false;
   } else {
     emailError.style.display = "none";

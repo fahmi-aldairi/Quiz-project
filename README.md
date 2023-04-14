@@ -4,14 +4,25 @@ Career Climb Quiz a quiz website that will evaluate candidates' knowledge and sk
 
 ## live code via github pages
 
-[livecode](https://fahmi-aldairi.github.io/Quiz-project/)
+[live url](https://zarqac2p3g3.github.io/career-climb-quiz/)
 
 ## mockup and wireframe
 
 [mockup and wireframe](https://www.figma.com/file/TUOIMfyykxu4TbZQvcAfbL/CCQ---wireframe%2Fmockup?node-id=25-58&t=a62CkK0AIr56uQl5-0)
 
-## orgnization link
-[here](https://github.com/ZarqaC2P3G3/career-climb-quiz)
+## trello board
+
+[trello board](https://trello.com/b/kv7Gdolz/third-project)
+
+## team members
+
+- scrum master : Fares Khalil
+- product manager : Majd Foudeh
+- Saad Zireeni
+- Tasneem Al-jamat
+- Hind Hudeib
+- Asma Rasheed
+- Fahmi Al-dairi
 
 ## technologies used
 
