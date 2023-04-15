@@ -1,0 +1,35 @@
+nav .container a:hover {
+  color: #0a89b8;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.logoutButton {
+  background: transparent;
+  border: solid 1px #0a89b8;
+  color: #000000;
+}
+button.logoutButton:hover {
+  color: rgb(0, 0, 0);
+  background-color: #0a89b8;
+  font-weight: 600;
+  border: solid 1px #000000;
+}
+.Register-btn {
+  background: #0a89b8;
+  color: white;
+  font-size: 18px;
+}
+
+.Register-btn:hover {
+  background-color: transparent;
+  color: black;
+}
